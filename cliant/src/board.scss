@@ -1,0 +1,755 @@
+﻿div.shogi {
+  color: #000000;
+  width: 17.4rem;
+  display: grid;
+  grid-template-columns: 1.2rem 15rem 1.2rem;
+  grid-template-rows: max-content 15.8rem max-content;
+  grid-template-areas:
+      "header header header"
+      "hands-left board hands-right"
+      "footer footer footer";
+  justify-items: center;
+  align-items: center;
+  font-size: 1rem;
+}
+div.shogi >  div.board > div.strong {
+  font-weight: bold;
+}
+div.shogi > figcaption {
+  height: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+  grid-area: header;
+}
+
+div.shogi > div.info {
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+  grid-area: footer;
+}
+
+div.shogi > div.board {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.4fr;
+  grid-template-rows: 0.4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.4fr;
+  grid-template-areas:
+      "a top9 top8 top7 top6 top5 top4 top3 top2 top1 b"
+      "left1 sq91 sq81 sq71 sq61 sq51 sq41 sq31 sq21 sq11 right1"
+      "left2 sq92 sq82 sq72 sq62 sq52 sq42 sq32 sq22 sq12 right2"
+      "left3 sq93 sq83 sq73 sq63 sq53 sq43 sq33 sq23 sq13 right3"
+      "left4 sq94 sq84 sq74 sq64 sq54 sq44 sq34 sq24 sq14 right4"
+      "left5 sq95 sq85 sq75 sq65 sq55 sq45 sq35 sq25 sq15 right5"
+      "left6 sq96 sq86 sq76 sq66 sq56 sq46 sq36 sq26 sq16 right6"
+      "left7 sq97 sq87 sq77 sq67 sq57 sq47 sq37 sq27 sq17 right7"
+      "left8 sq98 sq88 sq78 sq68 sq58 sq48 sq38 sq28 sq18 right8"
+      "left9 sq99 sq89 sq79 sq69 sq59 sq49 sq39 sq29 sq19 right9"
+"c bottom9 bottom8 bottom7 bottom6 bottom5 bottom4 bottom3 bottom2 bottom1 d";
+  justify-items: center;
+  align-items: center;
+  grid-area: board;
+}
+div.shogi.black-side > div.hands-black {
+  letter-spacing: 0.1em;
+  height: 100%;
+  writing-mode: vertical-rl;
+  grid-area: hands-right;
+}
+div.shogi.black-side > div.hands-white {
+  letter-spacing: 0.1em;
+  height: 100%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  grid-area: hands-left;
+}
+div.shogi.white-side > div.hands-black {
+  letter-spacing: 0.1em;
+  height: 100%;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  grid-area: hands-left;
+}
+div.shogi.white-side > div.hands-white {
+  letter-spacing: 0.1em;
+  height: 100%;
+  writing-mode: vertical-rl;
+  grid-area: hands-right;
+}
+div.shogi > div.hands-black  > span.name::before {
+  content: '▲';
+  margin-bottom: 0.2em;
+}
+div.shogi > div.hands-white  > span.name::before {
+  content: '△';
+  margin-bottom: 0.2em;
+}
+div.shogi > div.hands-black  > span.piece::before {
+  content: '持駒';
+  margin-top: 0.6em;
+  margin-bottom: 0.4em;
+}
+div.shogi > div.hands-white  > span.piece::before {
+  content: '持駒';
+  margin-top: 0.6em;
+  margin-bottom: 0.4em;
+}
+div.shogi > div.board > div.num {
+  font-size: 0.5em;
+  background: #ffffff00;
+}
+div.shogi.black-side > div.board > div.rank1{
+  grid-area: right1;
+}
+div.shogi.black-side > div.board > div.rank2{
+  grid-area: right2;
+}
+div.shogi.black-side > div.board > div.rank3{
+  grid-area: right3;
+}
+div.shogi.black-side > div.board > div.rank4{
+  grid-area: right4;
+}
+div.shogi.black-side > div.board > div.rank5{
+  grid-area: right5;
+}
+div.shogi.black-side > div.board > div.rank6{
+  grid-area: right6;
+}
+div.shogi.black-side > div.board > div.rank7{
+  grid-area: right7;
+}
+div.shogi.black-side > div.board > div.rank8{
+  grid-area: right8;
+}
+div.shogi.black-side > div.board > div.rank9{
+  grid-area: right9;
+}
+div.shogi.black-side > div.board > div.file1{
+  grid-area: top1;
+}
+div.shogi.black-side > div.board > div.file2{
+  grid-area: top2;
+}
+div.shogi.black-side > div.board > div.file3{
+  grid-area: top3;
+}
+div.shogi.black-side > div.board > div.file4{
+  grid-area: top4;
+}
+div.shogi.black-side > div.board > div.file5{
+  grid-area: top5;
+}
+div.shogi.black-side > div.board > div.file6{
+  grid-area: top6;
+}
+div.shogi.black-side > div.board > div.file7{
+  grid-area: top7;
+}
+div.shogi.black-side > div.board > div.file8{
+  grid-area: top8;
+}
+div.shogi.black-side > div.board > div.file9{
+  grid-area: top9;
+}
+
+div.shogi.white-side > div.board > div.rank1{
+  grid-area: left9;
+}
+div.shogi.white-side > div.board > div.rank2{
+  grid-area: left8;
+}
+div.shogi.white-side > div.board > div.rank3{
+  grid-area: left7;
+}
+div.shogi.white-side > div.board > div.rank4{
+  grid-area: left6;
+}
+div.shogi.white-side > div.board > div.rank5{
+  grid-area: left5;
+}
+div.shogi.white-side > div.board > div.rank6{
+  grid-area: left4;
+}
+div.shogi.white-side > div.board > div.rank7{
+  grid-area: left3;
+}
+div.shogi.white-side > div.board > div.rank8{
+  grid-area: left2;
+}
+div.shogi.white-side > div.board > div.rank9{
+  grid-area: left1;
+}
+div.shogi.white-side > div.board > div.file1{
+  grid-area: bottom9;
+}
+div.shogi.white-side > div.board > div.file2{
+  grid-area: bottom8;
+}
+div.shogi.white-side > div.board > div.file3{
+  grid-area: bottom7;
+}
+div.shogi.white-side > div.board > div.file4{
+  grid-area: bottom6;
+}
+div.shogi.white-side > div.board > div.file5{
+  grid-area: bottom5;
+}
+div.shogi.white-side > div.board > div.file6{
+  grid-area: bottom4;
+}
+div.shogi.white-side > div.board > div.file7{
+  grid-area: bottom3;
+}
+div.shogi.white-side > div.board > div.file8{
+  grid-area: bottom2;
+}
+div.shogi.white-side > div.board > div.file9{
+  grid-area: bottom1;
+}
+
+div.shogi > div.board > div.line {
+  height: 100%;
+  width: 100%;
+  border: 0.05rem solid #000000ff;
+  background: #ffffff00;
+}
+div.shogi > div.board > div.board-border {
+  grid-column: 2 / -2;
+  grid-row: 2 / -2;
+}
+div.shogi > div.board > div.area_f2 {
+  grid-column: 9 / 10;
+  grid-row: 2 / -2;
+}
+div.shogi > div.board > div.area_f4 {
+  grid-column: 7 / 8;
+  grid-row: 2 / -2;
+}
+div.shogi > div.board > div.area_f6 {
+  grid-column: 5 / 6;
+  grid-row: 2 / -2;
+}
+div.shogi > div.board > div.area_f8 {
+  grid-column: 3 / 4;
+  grid-row: 2 / -2;
+}
+div.shogi > div.board > div.area_r2 {
+  grid-row: 9 / 10;
+  grid-column: 2 / -2;
+}
+div.shogi > div.board > div.area_r4 {
+  grid-row: 7 / 8;
+  grid-column: 2 / -2;
+}
+div.shogi > div.board > div.area_r6 {
+  grid-row: 5 / 6;
+  grid-column: 2 / -2;
+}
+div.shogi > div.board > div.area_r8 {
+  grid-row: 3 / 4;
+  grid-column: 2 / -2;
+}
+div.shogi > div.board > div {
+  background: #ffffff00;
+}
+div.shogi.black-side > div.board > div.black {
+  margin-top: 10%;
+}
+div.shogi.black-side > div.board > div.white {
+  margin-bottom: 10%;
+  transform: rotate(180deg);
+}
+div.shogi.white-side > div.board > div.black {
+  margin-bottom: 10%;
+  transform: rotate(180deg);
+}
+div.shogi.white-side > div.board > div.white {
+  margin-top: 10%;
+}
+div.shogi.black-side > div.board > div.sq11{
+  grid-area: sq11;
+}
+div.shogi.black-side > div.board > div.sq12{
+  grid-area: sq12;
+}
+div.shogi.black-side > div.board > div.sq13{
+  grid-area: sq13;
+}
+div.shogi.black-side > div.board > div.sq14{
+  grid-area: sq14;
+}
+div.shogi.black-side > div.board > div.sq15{
+  grid-area: sq15;
+}
+div.shogi.black-side > div.board > div.sq16{
+  grid-area: sq16;
+}
+div.shogi.black-side > div.board > div.sq17{
+  grid-area: sq17;
+}
+div.shogi.black-side > div.board > div.sq18{
+  grid-area: sq18;
+}
+div.shogi.black-side > div.board > div.sq19{
+  grid-area: sq19;
+}
+div.shogi.black-side > div.board > div.sq21{
+  grid-area: sq21;
+}
+div.shogi.black-side > div.board > div.sq22{
+  grid-area: sq22;
+}
+div.shogi.black-side > div.board > div.sq23{
+  grid-area: sq23;
+}
+div.shogi.black-side > div.board > div.sq24{
+  grid-area: sq24;
+}
+div.shogi.black-side > div.board > div.sq25{
+  grid-area: sq25;
+}
+div.shogi.black-side > div.board > div.sq26{
+  grid-area: sq26;
+}
+div.shogi.black-side > div.board > div.sq27{
+  grid-area: sq27;
+}
+div.shogi.black-side > div.board > div.sq28{
+  grid-area: sq28;
+}
+div.shogi.black-side > div.board > div.sq29{
+  grid-area: sq29;
+}
+div.shogi.black-side > div.board > div.sq31{
+  grid-area: sq31;
+}
+div.shogi.black-side > div.board > div.sq32{
+  grid-area: sq32;
+}
+div.shogi.black-side > div.board > div.sq33{
+  grid-area: sq33;
+}
+div.shogi.black-side > div.board > div.sq34{
+  grid-area: sq34;
+}
+div.shogi.black-side > div.board > div.sq35{
+  grid-area: sq35;
+}
+div.shogi.black-side > div.board > div.sq36{
+  grid-area: sq36;
+}
+div.shogi.black-side > div.board > div.sq37{
+  grid-area: sq37;
+}
+div.shogi.black-side > div.board > div.sq38{
+  grid-area: sq38;
+}
+div.shogi.black-side > div.board > div.sq39{
+  grid-area: sq39;
+}
+div.shogi.black-side > div.board > div.sq41{
+  grid-area: sq41;
+}
+div.shogi.black-side > div.board > div.sq42{
+  grid-area: sq42;
+}
+div.shogi.black-side > div.board > div.sq43{
+  grid-area: sq43;
+}
+div.shogi.black-side > div.board > div.sq44{
+  grid-area: sq44;
+}
+div.shogi.black-side > div.board > div.sq45{
+  grid-area: sq45;
+}
+div.shogi.black-side > div.board > div.sq46{
+  grid-area: sq46;
+}
+div.shogi.black-side > div.board > div.sq47{
+  grid-area: sq47;
+}
+div.shogi.black-side > div.board > div.sq48{
+  grid-area: sq48;
+}
+div.shogi.black-side > div.board > div.sq49{
+  grid-area: sq49;
+}
+div.shogi.black-side > div.board > div.sq51{
+  grid-area: sq51;
+}
+div.shogi.black-side > div.board > div.sq52{
+  grid-area: sq52;
+}
+div.shogi.black-side > div.board > div.sq53{
+  grid-area: sq53;
+}
+div.shogi.black-side > div.board > div.sq54{
+  grid-area: sq54;
+}
+div.shogi.black-side > div.board > div.sq55{
+  grid-area: sq55;
+}
+div.shogi.black-side > div.board > div.sq56{
+  grid-area: sq56;
+}
+div.shogi.black-side > div.board > div.sq57{
+  grid-area: sq57;
+}
+div.shogi.black-side > div.board > div.sq58{
+  grid-area: sq58;
+}
+div.shogi.black-side > div.board > div.sq59{
+  grid-area: sq59;
+}
+div.shogi.black-side > div.board > div.sq61{
+  grid-area: sq61;
+}
+div.shogi.black-side > div.board > div.sq62{
+  grid-area: sq62;
+}
+div.shogi.black-side > div.board > div.sq63{
+  grid-area: sq63;
+}
+div.shogi.black-side > div.board > div.sq64{
+  grid-area: sq64;
+}
+div.shogi.black-side > div.board > div.sq65{
+  grid-area: sq65;
+}
+div.shogi.black-side > div.board > div.sq66{
+  grid-area: sq66;
+}
+div.shogi.black-side > div.board > div.sq67{
+  grid-area: sq67;
+}
+div.shogi.black-side > div.board > div.sq68{
+  grid-area: sq68;
+}
+div.shogi.black-side > div.board > div.sq69{
+  grid-area: sq69;
+}
+div.shogi.black-side > div.board > div.sq71{
+  grid-area: sq71;
+}
+div.shogi.black-side > div.board > div.sq72{
+  grid-area: sq72;
+}
+div.shogi.black-side > div.board > div.sq73{
+  grid-area: sq73;
+}
+div.shogi.black-side > div.board > div.sq74{
+  grid-area: sq74;
+}
+div.shogi.black-side > div.board > div.sq75{
+  grid-area: sq75;
+}
+div.shogi.black-side > div.board > div.sq76{
+  grid-area: sq76;
+}
+div.shogi.black-side > div.board > div.sq77{
+  grid-area: sq77;
+}
+div.shogi.black-side > div.board > div.sq78{
+  grid-area: sq78;
+}
+div.shogi.black-side > div.board > div.sq79{
+  grid-area: sq79;
+}
+div.shogi.black-side > div.board > div.sq81{
+  grid-area: sq81;
+}
+div.shogi.black-side > div.board > div.sq82{
+  grid-area: sq82;
+}
+div.shogi.black-side > div.board > div.sq83{
+  grid-area: sq83;
+}
+div.shogi.black-side > div.board > div.sq84{
+  grid-area: sq84;
+}
+div.shogi.black-side > div.board > div.sq85{
+  grid-area: sq85;
+}
+div.shogi.black-side > div.board > div.sq86{
+  grid-area: sq86;
+}
+div.shogi.black-side > div.board > div.sq87{
+  grid-area: sq87;
+}
+div.shogi.black-side > div.board > div.sq88{
+  grid-area: sq88;
+}
+div.shogi.black-side > div.board > div.sq89{
+  grid-area: sq89;
+}
+div.shogi.black-side > div.board > div.sq91{
+  grid-area: sq91;
+}
+div.shogi.black-side > div.board > div.sq92{
+  grid-area: sq92;
+}
+div.shogi.black-side > div.board > div.sq93{
+  grid-area: sq93;
+}
+div.shogi.black-side > div.board > div.sq94{
+  grid-area: sq94;
+}
+div.shogi.black-side > div.board > div.sq95{
+  grid-area: sq95;
+}
+div.shogi.black-side > div.board > div.sq96{
+  grid-area: sq96;
+}
+div.shogi.black-side > div.board > div.sq97{
+  grid-area: sq97;
+}
+div.shogi.black-side > div.board > div.sq98{
+  grid-area: sq98;
+}
+div.shogi.black-side > div.board > div.sq99{
+  grid-area: sq99;
+}
+div.shogi.white-side > div.board > div.sq11{
+  grid-area: sq99;
+}
+div.shogi.white-side > div.board > div.sq12{
+  grid-area: sq98;
+}
+div.shogi.white-side > div.board > div.sq13{
+  grid-area: sq97;
+}
+div.shogi.white-side > div.board > div.sq14{
+  grid-area: sq96;
+}
+div.shogi.white-side > div.board > div.sq15{
+  grid-area: sq95;
+}
+div.shogi.white-side > div.board > div.sq16{
+  grid-area: sq94;
+}
+div.shogi.white-side > div.board > div.sq17{
+  grid-area: sq93;
+}
+div.shogi.white-side > div.board > div.sq18{
+  grid-area: sq92;
+}
+div.shogi.white-side > div.board > div.sq19{
+  grid-area: sq91;
+}
+div.shogi.white-side > div.board > div.sq21{
+  grid-area: sq89;
+}
+div.shogi.white-side > div.board > div.sq22{
+  grid-area: sq88;
+}
+div.shogi.white-side > div.board > div.sq23{
+  grid-area: sq87;
+}
+div.shogi.white-side > div.board > div.sq24{
+  grid-area: sq86;
+}
+div.shogi.white-side > div.board > div.sq25{
+  grid-area: sq85;
+}
+div.shogi.white-side > div.board > div.sq26{
+  grid-area: sq84;
+}
+div.shogi.white-side > div.board > div.sq27{
+  grid-area: sq83;
+}
+div.shogi.white-side > div.board > div.sq28{
+  grid-area: sq82;
+}
+div.shogi.white-side > div.board > div.sq29{
+  grid-area: sq81;
+}
+div.shogi.white-side > div.board > div.sq31{
+  grid-area: sq79;
+}
+div.shogi.white-side > div.board > div.sq32{
+  grid-area: sq78;
+}
+div.shogi.white-side > div.board > div.sq33{
+  grid-area: sq77;
+}
+div.shogi.white-side > div.board > div.sq34{
+  grid-area: sq76;
+}
+div.shogi.white-side > div.board > div.sq35{
+  grid-area: sq75;
+}
+div.shogi.white-side > div.board > div.sq36{
+  grid-area: sq74;
+}
+div.shogi.white-side > div.board > div.sq37{
+  grid-area: sq73;
+}
+div.shogi.white-side > div.board > div.sq38{
+  grid-area: sq72;
+}
+div.shogi.white-side > div.board > div.sq39{
+  grid-area: sq71;
+}
+div.shogi.white-side > div.board > div.sq41{
+  grid-area: sq69;
+}
+div.shogi.white-side > div.board > div.sq42{
+  grid-area: sq68;
+}
+div.shogi.white-side > div.board > div.sq43{
+  grid-area: sq67;
+}
+div.shogi.white-side > div.board > div.sq44{
+  grid-area: sq66;
+}
+div.shogi.white-side > div.board > div.sq45{
+  grid-area: sq65;
+}
+div.shogi.white-side > div.board > div.sq46{
+  grid-area: sq64;
+}
+div.shogi.white-side > div.board > div.sq47{
+  grid-area: sq63;
+}
+div.shogi.white-side > div.board > div.sq48{
+  grid-area: sq62;
+}
+div.shogi.white-side > div.board > div.sq49{
+  grid-area: sq61;
+}
+div.shogi.white-side > div.board > div.sq51{
+  grid-area: sq59;
+}
+div.shogi.white-side > div.board > div.sq52{
+  grid-area: sq58;
+}
+div.shogi.white-side > div.board > div.sq53{
+  grid-area: sq57;
+}
+div.shogi.white-side > div.board > div.sq54{
+  grid-area: sq56;
+}
+div.shogi.white-side > div.board > div.sq55{
+  grid-area: sq55;
+}
+div.shogi.white-side > div.board > div.sq56{
+  grid-area: sq54;
+}
+div.shogi.white-side > div.board > div.sq57{
+  grid-area: sq53;
+}
+div.shogi.white-side > div.board > div.sq58{
+  grid-area: sq52;
+}
+div.shogi.white-side > div.board > div.sq59{
+  grid-area: sq51;
+}
+div.shogi.white-side > div.board > div.sq61{
+  grid-area: sq49;
+}
+div.shogi.white-side > div.board > div.sq62{
+  grid-area: sq48;
+}
+div.shogi.white-side > div.board > div.sq63{
+  grid-area: sq47;
+}
+div.shogi.white-side > div.board > div.sq64{
+  grid-area: sq46;
+}
+div.shogi.white-side > div.board > div.sq65{
+  grid-area: sq45;
+}
+div.shogi.white-side > div.board > div.sq66{
+  grid-area: sq44;
+}
+div.shogi.white-side > div.board > div.sq67{
+  grid-area: sq43;
+}
+div.shogi.white-side > div.board > div.sq68{
+  grid-area: sq42;
+}
+div.shogi.white-side > div.board > div.sq69{
+  grid-area: sq41;
+}
+div.shogi.white-side > div.board > div.sq71{
+  grid-area: sq39;
+}
+div.shogi.white-side > div.board > div.sq72{
+  grid-area: sq38;
+}
+div.shogi.white-side > div.board > div.sq73{
+  grid-area: sq37;
+}
+div.shogi.white-side > div.board > div.sq74{
+  grid-area: sq36;
+}
+div.shogi.white-side > div.board > div.sq75{
+  grid-area: sq35;
+}
+div.shogi.white-side > div.board > div.sq76{
+  grid-area: sq34;
+}
+div.shogi.white-side > div.board > div.sq77{
+  grid-area: sq33;
+}
+div.shogi.white-side > div.board > div.sq78{
+  grid-area: sq32;
+}
+div.shogi.white-side > div.board > div.sq79{
+  grid-area: sq31;
+}
+div.shogi.white-side > div.board > div.sq81{
+  grid-area: sq29;
+}
+div.shogi.white-side > div.board > div.sq82{
+  grid-area: sq28;
+}
+div.shogi.white-side > div.board > div.sq83{
+  grid-area: sq27;
+}
+div.shogi.white-side > div.board > div.sq84{
+  grid-area: sq26;
+}
+div.shogi.white-side > div.board > div.sq85{
+  grid-area: sq25;
+}
+div.shogi.white-side > div.board > div.sq86{
+  grid-area: sq24;
+}
+div.shogi.white-side > div.board > div.sq87{
+  grid-area: sq23;
+}
+div.shogi.white-side > div.board > div.sq88{
+  grid-area: sq22;
+}
+div.shogi.white-side > div.board > div.sq89{
+  grid-area: sq21;
+}
+div.shogi.white-side > div.board > div.sq91{
+  grid-area: sq19;
+}
+div.shogi.white-side > div.board > div.sq92{
+  grid-area: sq18;
+}
+div.shogi.white-side > div.board > div.sq93{
+  grid-area: sq17;
+}
+div.shogi.white-side > div.board > div.sq94{
+  grid-area: sq16;
+}
+div.shogi.white-side > div.board > div.sq95{
+  grid-area: sq15;
+}
+div.shogi.white-side > div.board > div.sq96{
+  grid-area: sq14;
+}
+div.shogi.white-side > div.board > div.sq97{
+  grid-area: sq13;
+}
+div.shogi.white-side > div.board > div.sq98{
+  grid-area: sq12;
+}
+div.shogi.white-side > div.board > div.sq99{
+  grid-area: sq11;
+}

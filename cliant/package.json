@@ -1,0 +1,67 @@
+{
+  "name": "yaneuraou_joseki",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/index.js",
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@types/lodash": "^4.14.123",
+    "connected-react-router": "^6.4.0",
+    "emotion": "^10.0.9",
+    "history": "^4.9.0",
+    "http2": "^3.3.7",
+    "lodash": "^4.17.11",
+    "react": "^16.8.6",
+    "react-app-polyfill": "^0.2.2",
+    "react-dom": "^16.8.6",
+    "react-emotion": "^10.0.0",
+    "react-redux": "^7.0.2",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.0.2",
+    "typeface-ibm-plex-mono": "^0.0.61",
+    "typeface-ibm-plex-sans": "^0.0.61",
+    "typesafe-actions": "^4.0.0"
+  },
+  "scripts": {
+    "e": "electron .",
+    "builde": "parcel build ./index.html -t electron -d ./electron/dist",
+    "start": "parcel ./index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "Firefox ESR",
+      "not ie <= 11",
+      "not op_mini all"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "@types/history": "^4.7.2",
+    "@types/node": "^11.13.6",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-redux": "^7.0.8",
+    "@types/react-router-dom": "^4.3.2",
+    "babel-plugin-emotion": "^10.0.9",
+    "electron": "^5.0.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.19.0",
+    "tslint": "^5.16.0",
+    "tslint-config-blvd": "^1.2.1",
+    "typescript": "^3.4.4"
+  }
+}

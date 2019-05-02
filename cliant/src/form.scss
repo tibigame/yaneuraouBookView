@@ -1,0 +1,24 @@
+﻿div.nodeView {
+  margin-bottom: '0.2rem'
+}
+
+div.nodeView > div:first-of-type {
+margin-bottom: '0.2rem'
+}
+
+div.nodeView > div:last-of-type {
+  display: 'flex'
+}
+div.nodeHeader {
+  height: '1rem';
+  width: '100%';
+  backGround: '#9fe0cd'
+}
+
+div.nodeHeader:hover {
+  background: '#9fe0cd';
+}
+
+div.nodeChildren:hover {
+  backGround: '#6f409d';
+}
