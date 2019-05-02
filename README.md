@@ -18,7 +18,13 @@
 * serverディレクトリでindex.pyを実行します。 (flaskサーバーが3000ポートで待ち受けます)
 * cliantディレクトリでnpm install (またはyarn install)
 * npm run start (またはyarn start) (1234ポートでクライアントサーバーが待ち受けます)
-* http://localhost:1234にchromeでアクセスしてください (他のブラウザは非推奨)
+* localhost:1234にchromeでアクセスしてください (他のブラウザは非推奨)
+
+![スクリーンショット](https://github.com/tibigame/yaneuraouBookView/blob/master/snapshot.png)
+
+* テキストボックスにsfenを入力するとその局面をルートとして再構築がはじまります。
+* 局面をクリックするとその下に「この局面をルートにする」と出るので、そこをクリックしても再構築できます。
+* 局面下部のバーをクリックすると折りたたむことができます。
 
 ### 既知の問題
 
