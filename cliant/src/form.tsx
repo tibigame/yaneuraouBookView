@@ -57,12 +57,15 @@ const NodeView: React.FC<NodeViewProps> = ({ node, func }) => {
         {Board(sfen, blackValue, node.moveList, node.prev, prevPretty)}
       </div>
       {rootChangeFlag ? (
-        <div
-          onClick={() => {
-            func(sfen)
-          }}
-        >
-          [このノードをルートにする]
+        <div>
+          <div>{sfen}</div>
+          <div
+            onClick={() => {
+              func(sfen)
+            }}
+          >
+            [このノードをルートにする]
+          </div>
         </div>
       ) : (
         <div />
