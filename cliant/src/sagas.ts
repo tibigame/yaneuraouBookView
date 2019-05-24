@@ -5,7 +5,7 @@ import { callApi } from './api'
 import _ from 'lodash'
 
 const MAX_DEPTH = 40 // 最大のrootからの探索深さ
-const API_LIMIT = 400 // 最大node数
+const API_LIMIT = 200 // 最大node数
 let k = 0
 
 // 指し手の上位を優先的に探索するための値

@@ -5,8 +5,8 @@
   "main": "electron/index.js",
   "dependencies": {
     "@emotion/core": "^10.0.10",
-    "@emotion/styled": "^10.0.10",
-    "@types/lodash": "^4.14.123",
+    "@emotion/styled": "^10.0.11",
+    "@types/lodash": "^4.14.132",
     "connected-react-router": "^6.4.0",
     "emotion": "^10.0.9",
     "history": "^4.9.0",
@@ -16,7 +16,7 @@
     "react-app-polyfill": "^0.2.2",
     "react-dom": "^16.8.6",
     "react-emotion": "^10.0.0",
-    "react-redux": "^7.0.2",
+    "react-redux": "^7.0.3",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
     "redux": "^4.0.1",
@@ -24,7 +24,7 @@
     "redux-saga": "^1.0.2",
     "typeface-ibm-plex-mono": "^0.0.61",
     "typeface-ibm-plex-sans": "^0.0.61",
-    "typesafe-actions": "^4.0.0"
+    "typesafe-actions": "^4.4.0"
   },
   "scripts": {
     "e": "electron .",
@@ -47,21 +47,21 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@types/history": "^4.7.2",
-    "@types/node": "^11.13.6",
-    "@types/react": "^16.8.14",
+    "@types/node": "^11.13.11",
+    "@types/react": "^16.8.18",
     "@types/react-dom": "^16.8.4",
-    "@types/react-redux": "^7.0.8",
-    "@types/react-router-dom": "^4.3.2",
+    "@types/react-redux": "^7.0.9",
+    "@types/react-router-dom": "^4.3.3",
     "babel-plugin-emotion": "^10.0.9",
-    "electron": "^5.0.0",
+    "electron": "^5.0.2",
     "parcel-bundler": "^1.12.3",
-    "sass": "^1.19.0",
+    "sass": "^1.20.1",
     "tslint": "^5.16.0",
     "tslint-config-blvd": "^1.2.1",
-    "typescript": "^3.4.4"
+    "typescript": "^3.4.5"
   }
 }
