@@ -5,7 +5,7 @@
 指定局面から掘り進めた定跡をテラショック定跡化しています。
 ここでは定跡作成のためのノウハウを書いていきます。
 定跡の成果はこちらを参照してください。
-![横歩取り△４五角 (他横歩取り超急戦定跡)](https://github.com/tibigame/yaneuraouBookView/tree/master/book/yokofu_super_rapid)
+[横歩取り△４五角 (他横歩取り超急戦定跡)](https://github.com/tibigame/yaneuraouBookView/tree/master/book/yokofu_super_rapid)
 
 * 作成したテラショック定跡は(yokofu_super_rapid-tera.db)
 * ビルド前の定跡は(yokofu_super_rapid.db)
@@ -69,10 +69,15 @@ makebook build_tree yokofu_super_rapid.db yokofu_super_rapid-tera.db black_conte
 ### 注意点
 
 * 手順前後の局面に注意
-先手がA、B、後手がC、Dでどの順番で指してもいいとき、ACBD、ADBCなどのすべての道を通って合流するところまでは棋譜で作っておかないといけない。  
+先手がA、B、後手がC、Dでどの順番で指してもいいとき、  
+ACBD、ADBCなどのすべての道を通って  
+合流するところまでは棋譜で作っておかないといけない。  
 不成とかMultiPVの外の手でそういうのが入ると途端に厄介。
 
 * 予定の指し手がMultiPVの外→その局面だけMultiPVを上げて掘る。(普通はMultiPV4もあれば引っかかるはずなのでこれは例外のはず)
+
+* いわゆる手が広い局面で無難な手を指す定跡を掘ってもマシンパワーがいくらあっても足りない。  
+なのでお互いに一直線で斬り合うような変化を深く掘ってみよう。
 
 * depth30とか36程度ですべてわかったつもりになってはいけないよ。
 たとえばこの局面
