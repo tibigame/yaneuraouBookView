@@ -1,6 +1,6 @@
 ﻿from ShogiNotebook.Board import Board
 
-data = open("user_book1.db", "r")
+data = open("../book/yokofu_super_rapid-tera.db", "r")
 
 class Move:
     def __init__(self, sfen: str, move: str):
